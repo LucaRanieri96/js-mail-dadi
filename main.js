@@ -47,7 +47,8 @@ console.log(emailList)
 // ^^^ per il bonus 1 devo riscrivere parte del codice scritto sopra ^^^
 
 // dopo il bonus
-sendButton.addEventListener("click", function () {
+// Siccome Donato mi vuole male devo ricostruire questo senza include e con un ciclo for (lo faccio sotto)
+/* sendButton.addEventListener("click", function () {
 
   const email = inputEmail.value;
   console.log(inputEmail.value)
@@ -57,7 +58,24 @@ sendButton.addEventListener("click", function () {
   } else {
     answerEl.innerHTML = ("Mi dispiace, la tua email non è valida per accedere alla pagina")
   }
-});
+}); */
+
+sendButton.addEventListener("click", function () {
+
+    const email = inputEmail.value;
+    console.log(inputEmail.value);
+    
+    for (let i = 0; i < emailList.length; i++) {
+        
+        if( email == emailList[i]) {
+            answerEl.innerHTML = ("Evviva! Bentornato " + inputEmail.value)
+        } else {
+            answerEl.innerHTML = ("Mi dispiace, la tua email non è valida per accedere alla pagina")
+          }
+    }
+
+  });
+
 
 /* 
 Problema:2 
