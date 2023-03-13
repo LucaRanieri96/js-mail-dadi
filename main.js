@@ -6,8 +6,14 @@ Mail Bonus
 Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina. 
 */
 
+// STRUMENTI
+// • PROMPT
+// • CONST/LET
+// • IF/ELSE
 
-
+// Chiedo all'utente la sua email e la metto dentro una variabile
+const userEmail = prompt("Inserisci la tua Email");
+console.log(userEmail);
 
 
 
