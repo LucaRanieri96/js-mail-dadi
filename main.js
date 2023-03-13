@@ -12,9 +12,13 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 // • ARRAY
 // • IF/ELSE
 
+// Bonus1 definisco le variabili per gli elementi della dom da cui devo prendere le informazioni
+const inputEmail = document.getElementById("email");
+const sendButton = document.getElementById("send");
+
 // Chiedo all'utente la sua email e la metto dentro una variabile
-const userEmail = prompt("Inserisci la tua Email");
-console.log(userEmail);
+/* const userEmail = prompt("Inserisci la tua Email");
+console.log(userEmail); */ //prima del bonus
 
 // Mi creo un array che contenta varie email del sito
 // le email le scrivo a caso visto non posso avere nessun sistema di "subscribe" per inserire delle email dentro alla lista
@@ -35,7 +39,9 @@ if (emailList.includes(userEmail)) {
     console.log("no, you can't enter")
 }
 
-// Bonus 1 
+// ^^^ per il bonus 1 devo riscrivere parte del codice scritto sopra ^^^
+// prima di tutto cambio il modo in cui prendo la userEmail
+
 
 
 
