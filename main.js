@@ -15,36 +15,49 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 // Bonus1 definisco le variabili per gli elementi della dom da cui devo prendere le informazioni
 const inputEmail = document.getElementById("email");
 const sendButton = document.getElementById("send");
+// elemento della dom dove scrivo la risposta della verifica password
+const answerEl = document.getElementById("answer");
 
 // Chiedo all'utente la sua email e la metto dentro una variabile
 /* const userEmail = prompt("Inserisci la tua Email");
-console.log(userEmail); */ //prima del bonus
+console.log(userEmail); */ 
+// ^^^ prima del bonus ^^^
 
 // Mi creo un array che contenta varie email del sito
 // le email le scrivo a caso visto non posso avere nessun sistema di "subscribe" per inserire delle email dentro alla lista
 
 const emailList = [
-"luca@gmail.com", 
-"gianni@gmail.com", 
-"mario@gmail.com",
-"federica@gmail.com",
-"giuseppe@gmail.com" 
+  "luca@gmail.com",
+  "gianni@gmail.com",
+  "mario@gmail.com",
+  "federica@gmail.com",
+  "giuseppe@gmail.com",
 ];
+
+console.log(emailList)
 
 // Ora controllo se l'email dentro il prompt è incluso dentro l'array
 
-if (emailList.includes(userEmail)) {
+/* if (emailList.includes(userEmail)) {
     console.log("yes, you can enter")
 } else {
     console.log("no, you can't enter")
-}
+} */  //^^^ prima del bonus ^^^
 
 // ^^^ per il bonus 1 devo riscrivere parte del codice scritto sopra ^^^
-// prima di tutto cambio il modo in cui prendo la userEmail
 
+// dopo il bonus
+sendButton.addEventListener("click", function () {
 
+  const email = inputEmail.value;
+  console.log(inputEmail.value)
 
-
+  if (emailList.includes(email)) {
+    answerEl.innerHTML = ("Evviva! Bentornato " + inputEmail.value)
+  } else {
+    answerEl.innerHTML = ("Mi dispiace, la tua email non è valida per accedere alla pagina")
+  }
+});
 
 /* 
 Problema:2 
