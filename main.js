@@ -35,6 +35,7 @@ if (emailList.includes(userEmail)) {
     console.log("no, you can't enter")
 }
 
+// Bonus 1 
 
 
 
