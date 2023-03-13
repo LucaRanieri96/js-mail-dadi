@@ -67,3 +67,21 @@ Prima di partire a scrivere codice poniamoci qualche domanda:
 Che ci sia un array da qualche parte?
 Se dobbiamo confrontare qualcosa che "cosa" ci serve? 
 */
+
+// STRUMENTI
+// • CONST/LET
+// • MATH
+// • IF
+
+// mi creo le costanti che riprendono gli elementi della dom 
+
+// const dice = document.getElementById("throw");
+// const result = document.getElementById("result");
+
+// ora metto un eventlistener sul pulsante e comincio a definire le casistiche 
+
+/* dice.addEventListener ("click", function(){
+// al click del pulsante devo generare due numeri, 1 per il computer e l'altro per il giocatore, e poi confrontarli
+    const player = Math.floor(Math.random() * 6) + 1;
+    const cpu = Math.floor(Math.random() * 6) + 1;
+}); */
