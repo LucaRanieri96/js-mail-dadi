@@ -20,7 +20,7 @@ const answerEl = document.getElementById("answer");
 
 // Chiedo all'utente la sua email e la metto dentro una variabile
 /* const userEmail = prompt("Inserisci la tua Email");
-console.log(userEmail); */ 
+console.log(userEmail); */
 // ^^^ prima del bonus ^^^
 
 // Mi creo un array che contenta varie email del sito
@@ -34,7 +34,7 @@ const emailList = [
   "giuseppe@gmail.com",
 ];
 
-console.log(emailList)
+console.log(emailList);
 
 // Ora controllo se l'email dentro il prompt è incluso dentro l'array
 
@@ -42,7 +42,7 @@ console.log(emailList)
     console.log("yes, you can enter")
 } else {
     console.log("no, you can't enter")
-} */  //^^^ prima del bonus ^^^
+} */ //^^^ prima del bonus ^^^
 
 // ^^^ per il bonus 1 devo riscrivere parte del codice scritto sopra ^^^
 
@@ -61,21 +61,27 @@ console.log(emailList)
 }); */
 
 sendButton.addEventListener("click", function () {
+  const email = inputEmail.value;
+  console.log(inputEmail.value);
 
-    const email = inputEmail.value;
-    console.log(inputEmail.value);
-    
-    for (let i = 0; i < emailList.length; i++) {
-        
-        if( email == emailList[i]) {
-            answerEl.innerHTML = ("Evviva! Bentornato " + inputEmail.value)
-        } else {
-            answerEl.innerHTML = ("Mi dispiace, la tua email non è valida per accedere alla pagina")
-          }
+  let isEmailFound = false;
+
+  for (let i = 0; i < emailList.length; i++) {
+    if (email == emailList[i]) {
+      isEmailFound = true;
     }
-
-  });
-
+  }
+  /**
+   * isEmailFound === true -> false
+   * isEmailFound === true -> true
+   */
+  if (isEmailFound) {
+    answerEl.innerHTML = "Evviva! Bentornato " + inputEmail.value;
+  } else {
+    answerEl.innerHTML =
+      "Mi dispiace, la tua email non è valida per accedere alla pagina";
+  }
+});
 
 /* 
 Problema:2 
@@ -91,23 +97,24 @@ Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 // • MATH
 // • IF
 
-// mi creo le costanti che riprendono gli elementi della dom 
+// mi creo le costanti che riprendono gli elementi della dom
 
 const dice = document.getElementById("throw");
 const result = document.getElementById("result");
 
-// ora metto un eventlistener sul pulsante e comincio a definire le casistiche 
+// ora metto un eventlistener sul pulsante e comincio a definire le casistiche
 
-dice.addEventListener ("click", function(){
-// al click del pulsante devo generare due numeri, 1 per il computer e l'altro per il giocatore, e poi confrontarli
-    const player = Math.floor(Math.random() * 6) + 1;
-    const cpu = Math.floor(Math.random() * 6) + 1;
+dice.addEventListener("click", function () {
+  // al click del pulsante devo generare due numeri, 1 per il computer e l'altro per il giocatore, e poi confrontarli
+  const player = Math.floor(Math.random() * 6) + 1;
+  const cpu = Math.floor(Math.random() * 6) + 1;
 
-    if (player > cpu) {
-        result.innerHTML = ("Evviva! " + player + " > " + cpu + " Hai vinto!"); 
-    } else if (player < cpu) {
-        result.innerHTML = ("Peccato... " + player + " < " + cpu + " hai perso...");
-    } else {
-        result.innerHTML = ("Un pareggio! " + player + " = " + cpu + " prova a rilanciare il dado!");
-    }
+  if (player > cpu) {
+    result.innerHTML = "Evviva! " + player + " > " + cpu + " Hai vinto!";
+  } else if (player < cpu) {
+    result.innerHTML = "Peccato... " + player + " < " + cpu + " hai perso...";
+  } else {
+    result.innerHTML =
+      "Un pareggio! " + player + " = " + cpu + " prova a rilanciare il dado!";
+  }
 });
