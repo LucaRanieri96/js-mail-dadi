@@ -80,8 +80,8 @@ const result = document.getElementById("result");
 
 // ora metto un eventlistener sul pulsante e comincio a definire le casistiche 
 
-/* dice.addEventListener ("click", function(){
+dice.addEventListener ("click", function(){
 // al click del pulsante devo generare due numeri, 1 per il computer e l'altro per il giocatore, e poi confrontarli
     const player = Math.floor(Math.random() * 6) + 1;
     const cpu = Math.floor(Math.random() * 6) + 1;
-}); */
+}); 
