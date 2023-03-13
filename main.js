@@ -75,8 +75,8 @@ Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 // mi creo le costanti che riprendono gli elementi della dom 
 
-// const dice = document.getElementById("throw");
-// const result = document.getElementById("result");
+const dice = document.getElementById("throw");
+const result = document.getElementById("result");
 
 // ora metto un eventlistener sul pulsante e comincio a definire le casistiche 
 
