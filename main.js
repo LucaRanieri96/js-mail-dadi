@@ -86,8 +86,10 @@ dice.addEventListener ("click", function(){
     const cpu = Math.floor(Math.random() * 6) + 1;
 
     if (player > cpu) {
-        result.innerHTML = ("Evviva! Hai vinto") 
-    } else if (player == cpu) {
-        result.innerHTML = ("Peccato...hai perso")
+        result.innerHTML = ("Evviva! " + player + " > " + cpu + " Hai vinto!"); 
+    } else if (player < cpu) {
+        result.innerHTML = ("Peccato... " + player + " < " + cpu + " hai perso...");
+    } else {
+        result.innerHTML = ("Un pareggio! " + player + " = " + cpu + " prova a rilanciare il dado!");
     }
-}); 
+});
