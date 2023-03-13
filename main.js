@@ -15,6 +15,17 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 const userEmail = prompt("Inserisci la tua Email");
 console.log(userEmail);
 
+// Mi creo un array che contenta varie email del sito
+// le email le scrivo a caso visto non posso avere nessun sistema di "subscribe" per inserire delle email dentro alla lista
+
+const emailList = [
+"luca@gmail.com", 
+"gianni@gmail.com", 
+"mario@gmail.com",
+"federica@gmail.com",
+"giuseppe@gmail.com" 
+];
+
 
 
 
