@@ -84,4 +84,10 @@ dice.addEventListener ("click", function(){
 // al click del pulsante devo generare due numeri, 1 per il computer e l'altro per il giocatore, e poi confrontarli
     const player = Math.floor(Math.random() * 6) + 1;
     const cpu = Math.floor(Math.random() * 6) + 1;
+
+    if (player > cpu) {
+        result.innerHTML = ("Evviva! Hai vinto") 
+    } else if (player == cpu) {
+        result.innerHTML = ("Peccato...hai perso")
+    }
 }); 
