@@ -9,6 +9,7 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 // STRUMENTI
 // • PROMPT
 // • CONST/LET
+// • ARRAY
 // • IF/ELSE
 
 // Chiedo all'utente la sua email e la metto dentro una variabile
@@ -25,6 +26,15 @@ const emailList = [
 "federica@gmail.com",
 "giuseppe@gmail.com" 
 ];
+
+// Ora controllo se l'email dentro il prompt è incluso dentro l'array
+
+if (emailList.includes(userEmail)) {
+    console.log("yes, you can enter")
+} else {
+    console.log("no, you can't enter")
+}
+
 
 
 
